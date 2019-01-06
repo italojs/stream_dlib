@@ -1,0 +1,13 @@
+{
+    "LANDMARKS68": "face_landmarks.dat",
+    "server": {
+        "port": 9000,
+        "ip": "0.0.0.0"
+    },
+    "debug":true,
+    "cors": {
+        "api/*": {"origins": "*"}
+    }
+}
+
+    
