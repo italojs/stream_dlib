@@ -7,7 +7,8 @@ COPY ./ /usr/src/app
 
 RUN apt-get update -y
 RUN apt-get install cmake -y
+RUN pip install Flask Flask-SocketIO flask-cors
 RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 10000
+EXPOSE 9000
 CMD [ "python", "./run.py" ]

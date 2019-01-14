@@ -1,3 +1,4 @@
+import os
 import json
 import appfly
 from queue import Queue
@@ -29,4 +30,4 @@ def fn(appfly_app):
 
 # Config
 config = json.load(open('./app/config.json'))
-factory(fn, __name__, config["cors"], template_folder='/home/italojs/dev/python/api-flask-noalvo-demo/app/presentation/views/templates', has_socket=True)
+factory(fn, __name__, config["cors"], template_folder=os.environ.get('FULL_TEMPLATE_PATH'), has_socket=True)
